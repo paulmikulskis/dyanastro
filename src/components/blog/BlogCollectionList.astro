@@ -1,0 +1,40 @@
+---
+import BlogCollectionItemPreview from './BlogCollectionItemPreview.astro';
+import type { CollectionEntry } from 'astro:content';
+import { parse, isBefore } from 'date-fns';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+}
+const { posts } = Astro.props;
+posts.sort((a, b) => {
+        const x = parse(a.data.publishDate, 'MMMM d, yyyy', new Date())
+        const y = parse(b.data.publishDate, 'MMMM d, yyyy', new Date())
+		if (isBefore(x, y)) return 1;
+		if (isBefore(y, x)) return -1;
+		return 0;
+	});
+---
+<ul class="blog-posts-list__list">
+  {posts?.map((post) => {
+    return (
+      <BlogCollectionItemPreview post={post} />
+    )
+  })}
+</ul>
+
+<style>
+.blog-posts-list__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .blog-posts-list__list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

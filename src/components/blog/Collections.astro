@@ -1,0 +1,38 @@
+---
+import BlogCollectionItemPreview from './BlogCollectionItemPreview.astro';
+import type { CollectionEntry } from 'astro:content';
+import { parse, isBefore } from 'date-fns';
+
+---
+
+<div class="container">
+    <div class="linkbox" >
+        <div class="slot-content">
+        <slot />
+        </div>
+    </div>
+</div>
+
+<style>
+.slot-content {
+    padding: 0.5rem;
+}
+.linkbox {
+    border: 3px transparent grey;
+    border-radius: 15px;
+    margin: 0;
+    padding: 3px;
+    list-style: none;
+    display: block;
+}
+.linkbox:hover {
+    padding: 0px;
+    border: 3px solid grey;
+    border-radius: 15px;
+  }
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

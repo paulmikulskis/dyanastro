@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+const { post } = Astro.props;
+---
+
+<li class="blog-post__preview">
+  <a href={`/blog/posts/${post.slug}`}>
+    <img src={post.data.featuredImage} />
+    <h3>{post.data.title}</h3>
+    {post.data.excerpt && <p>{post.data.excerpt}</p>}
+  </a>
+</li>
+
+
+<style>
+.blog-post__preview img {
+  margin-bottom: 1rem;
+  border-radius: calc(var(--theme-shape-radius) /2);
+  transition: border-radius var(--theme-transition);
+}
+.blog-post__preview:hover img {
+  border-radius: var(--theme-shape-radius);
+}
+.blog-post__preview a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.blog-post__preview h3 {
+  margin: 0;
+}
+</style> 

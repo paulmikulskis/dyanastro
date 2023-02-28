@@ -1,0 +1,45 @@
+---
+import { parse, isBefore } from 'date-fns';
+import {
+	Container,
+	TextCardSection,
+	BlogPostsList,
+} from '@littlesticks/odyssey-theme-components';
+import { getCollection, getEntryBySlug } from 'astro:content';
+import Layout from '../../layouts/Page.astro';
+import NewsletterForm from '../../components/forms/NewsletterForm.astro';
+import BlogCollectionList from '../../components/blog/BlogCollectionList.astro';
+
+
+const allBlogPosts = await getCollection('blog', ({ data }) => {
+	return !data.hidden;
+});
+
+const seo = {
+	title: 'Blog | Astro Odyssey Theme',
+	description: 'Astro Odyssey Theme Blog Page',
+};
+---
+
+<Layout {seo}>
+	<Container>
+		<TextCardSection>
+			<h1>Dyana's Blog</h1>
+			<p>
+				Happy to have you here!  Technology, design, finance, and really whatever. I write about the things I'm learning and reading about, as well as musings that might occur after a glass of wine.
+			</p>
+			<p>Stay up to date</p>
+			<NewsletterForm />
+		</TextCardSection>
+		<section class="blog-posts-list__section">
+			<h2>Recent Posts</h2>
+			<BlogCollectionList posts={allBlogPosts} />
+		</section>
+	</Container>
+</Layout>
+
+<style>
+	.blog-posts-list__section {
+		margin: var(--section-margin) auto;
+	}
+</style>

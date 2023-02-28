@@ -1,0 +1,146 @@
+---
+import {Icon} from 'astro-icon'
+import {
+  AnnouncementBar,
+	Button,
+	CustomerQuoteSection,
+	ThreeColumnTextSection,
+	YouTubeEmbedSection,
+  StickyTextImageSection,
+  CtaCardSection,
+  Container
+} from '@littlesticks/odyssey-theme-components';
+import { CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+import HeroSection from '../components/sections/heros/HeroSection.astro';
+import CenterTitle from '../components/sections/heros/CenterTitle.astro';
+import Collections from '../components/blog/Collections.astro';
+const allBlogPosts = await getCollection('blog', ({ data }) => {
+	return !data.hidden;
+});
+const seo = {
+	title: 'Landing Page #1 | Astro Odyssey Theme',
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
+const featuredCollectionMap = allBlogPosts.map((post) => {
+  return 
+})
+---
+<script>
+  // Define the behaviour for our new type of HTML element.
+  class RizzButton extends HTMLElement {
+    constructor() {
+      super();
+      function getRandomInt(max: number) {
+        return Math.floor(Math.random() * max);
+      }
+      const rizzButton = this.querySelector('button');
+      const slugs = this.dataset.blogslugs?.split(',') || ['404']
+      rizzButton?.addEventListener('click', () => {
+        const redirect = window.location.origin + '/blog/posts/' + slugs[getRandomInt(slugs.length)]
+        window.location.href = redirect
+      });
+    }
+  }
+
+  // Tell the browser to use our RizzButton class for <astro-rizzalert> elements.
+  customElements.define('astro-rizzalert', RizzButton);
+</script>
+
+
+<Layout seo={seo} >
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Dany's Moon Base</h1>
+			<p>Every technologist needs a blog right?  Keep scrolling for services and samples or click below for a random piece by me.</p>
+    </div>
+		<div slot="btns-container">
+      <astro-rizzalert class="rizzalert" data-blogslugs={allBlogPosts.map((b)=>b.slug)}>
+			<Button
+            customIcon>
+            I'm Feeling Dainty
+                <Fragment slot="icon">
+                    <Icon name="ic:baseline-chevron-right"/>
+                </Fragment>
+            </Button
+			>
+    </astro-rizzalert>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/landing-1/danyProfileMain.jpg"
+				alt="Dyana Butler headshot"
+				id="home-hero-image"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<CustomerQuoteSection
+		quoteText="From ideation to exection, Dyana stays organized, communicates using some wonderful outlines, and is a pleasure to work with.  When it comes to speed of execution, she gets it"
+		customerName="PodRocket host"
+	/>
+
+	<!-- <YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded /> -->
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h2>Collections</h2>
+      <Collections>
+        <h3>Market Analysis</h3>
+        <p>In this collection we take an piece from the NYT going over U.S. investors pulling out of Chinese companies in Q1 of 2023 and turn it into three separate pieces of content from three different angles.</p>
+      </Collections>
+      <Collections>
+        <h3>Ladaede</h3>
+        <p>In this collection we take an piece from the NYT going over U.S. investors pulling out of Chinese companies in Q1 of 2023 and turn it into three separate pieces of content from three different angles.</p>
+      </Collections>
+    </div>
+     <picture slot="image-container">
+      <img
+        src="/assets/images/landing-1/marketAnglesThumbnail.png"
+        alt="Generating content from a single piece of news"
+        loading="lazy"
+      />
+    </picture>
+  </StickyTextImageSection>
+
+  <CenterTitle>
+    <h1 slot="text-container">Services</h1>
+</CenterTitle>
+<hr />
+
+<ThreeColumnTextSection>
+    <div slot="column-1-body">
+        <h2>Writing</h2>
+        <p>
+            If you're looking to drive traffic to your product or blog with impactful writing, let's get in touch to figure out how to carve out space for the voice of your content.
+        </p>
+    </div>
+    <Button slot="column-1-cta" href="/blog">See Blog</Button>
+    <div slot="column-2-body">
+        <h2>Web</h2>
+        <p>
+            Keep your best writer's writing and let me build their content into a SEO masterpiece.
+            I help content teams stay ahead of the keyword curve with a focus on SEO and user experience.
+        </p>
+    </div>
+    <Button slot="column-2-cta" outlined href="/intuitive-web">Learn More</Button>
+    <div slot="column-3-body">
+        <h2>Process</h2>
+        <p>
+            Work with me to improve your content team's efficiency.  My adaptive tooling-driven approach towards building workflows will help you get more done in less time with measurable results.
+        </p>
+    </div>
+    <Button slot="column-3-cta" href="/services/discovery-call">Learn More</Button>
+</ThreeColumnTextSection>
+
+  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+    <h2>Get In Touch Now</h2>
+    <p>With just a couple clicks, I'll be reaching back to discuss if I can help your outreach goals succeed.</p>
+    <Button href="/dany/contact" customIcon>Get Started <Fragment slot="icon">
+      <Icon name="ic:baseline-chevron-right"/>
+    </Fragment></Button>
+  </CtaCardSection>
+
+</Layout>
+
