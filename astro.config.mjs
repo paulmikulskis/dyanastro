@@ -4,10 +4,12 @@ import mdx from "@astrojs/mdx";
 import image from "@astrojs/image";
 import lit from "@astrojs/lit";
 
-// https://astro.build/config
 import react from "@astrojs/react";
 
 // https://astro.build/config
+
+// https://astro.build/config
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,5 +24,9 @@ export default defineConfig({
     ssr: {
       external: ["svgo"]
     }
-  }
+  },
+  output: "server",
+  adapter: vercel({
+    analytics: true
+  })
 });
