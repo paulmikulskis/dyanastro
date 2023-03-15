@@ -6,7 +6,6 @@ import {
 	CustomerQuoteSection,
 	ThreeColumnTextSection,
 	YouTubeEmbedSection,
-  StickyTextImageSection,
   CtaCardSection,
   Container
 } from '@littlesticks/odyssey-theme-components';
@@ -16,6 +15,9 @@ import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astr
 import HeroSection from '../components/sections/heros/HeroSection.astro';
 import CenterTitle from '../components/sections/heros/CenterTitle.astro';
 import Collections from '../components/blog/Collections.astro';
+import CollectionList from '../components/blog/CollectionList.jsx';
+import '../styles/odyssey-customs.css';
+
 const allBlogPosts = await getCollection('blog', ({ data }) => {
 	return !data.hidden;
 });
@@ -23,9 +25,25 @@ const seo = {
 	title: 'Landing Page #1 | Astro Odyssey Theme',
 	description: 'Landing Page #1 | Astro Odyssey Theme',
 };
-const featuredCollectionMap = allBlogPosts.map((post) => {
-  return 
-})
+// Code to generate featuredCollections (same as previous implementation)
+const featuredCollectionMap = allBlogPosts.reduce((acc, post) => {
+  if (post.data.collection) {
+    const slugs = Array.isArray(acc[post.data.collection]?.slugs) ? acc[post.data.collection].slugs as string[] : [];
+    acc[post.data.collection] = {
+      slugs: [...slugs, post.slug],
+      collectionThumbnail: post.data.collectionThumbnail ? post.data.collectionThumbnail : acc[post.data.collection]?.collectionThumbnail,
+      collectionDescription: post.data.collectionDescription ? post.data.collectionDescription : acc[post.data.collection]?.collectionDescription,
+    };
+  }
+  return acc;
+}, {} as Record<string, Record<string, string[] | string | undefined>>);
+ 
+const featuredCollections = Object.fromEntries(
+  Array.from(
+    Object.entries(featuredCollectionMap).map(([collection, data]) => [collection, data]),
+  ),
+);
+
 ---
 <script>
   // Define the behaviour for our new type of HTML element.
@@ -83,26 +101,7 @@ const featuredCollectionMap = allBlogPosts.map((post) => {
 
 	<!-- <YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded /> -->
 
-  <StickyTextImageSection>
-    <div slot="text-container">
-      <h2>Collections</h2>
-      <Collections>
-        <h3>Market Analysis</h3>
-        <p>In this collection we take an piece from the NYT going over U.S. investors pulling out of Chinese companies in Q1 of 2023 and turn it into three separate pieces of content from three different angles.</p>
-      </Collections>
-      <Collections>
-        <h3>Ladaede</h3>
-        <p>In this collection we take an piece from the NYT going over U.S. investors pulling out of Chinese companies in Q1 of 2023 and turn it into three separate pieces of content from three different angles.</p>
-      </Collections>
-    </div>
-     <picture slot="image-container">
-      <img
-        src="/assets/images/landing-1/marketAnglesThumbnail.png"
-        alt="Generating content from a single piece of news"
-        loading="lazy"
-      />
-    </picture>
-  </StickyTextImageSection>
+  <CollectionList client:load featuredCollections={featuredCollections} />
 
   <CenterTitle>
     <h1 slot="text-container">Services</h1>

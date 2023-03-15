@@ -6,7 +6,9 @@ featuredImage: '/assets/images/blog/odyssey-theme-officially-released/featured.j
 excerpt: 'The time has come to officially release Odyssey Theme to the world. Learn more about what it is and how you can start using it today.'
 tags: 
   - Odyssey Theme
-collection: "3 Angles on Investing"   
+collection: "Tutorials"
+collectionDescription: "Tutorials on the web are worth their weight in gold when written with care, attention, and an accurate persective of the expected audience.  Check out my collection on SEO best practices."
+collectionThumbnail: "https://riversagency.com/wp-content/uploads/2021/10/1603954182-seo-article-header.jpeg"
 ---
 I replaced this one
 

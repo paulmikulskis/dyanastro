@@ -6,6 +6,7 @@ featuredImage: 'https://placekeanu.com/900/500/y'
 excerpt: 'test'
 tags: ['Bullshit']
 collection: "3 Angles on Investing"
+collectionDescription: "In this collection, we take a piece from the NYT going over U.S. investors pulling out of Chinese companies in Q1 of 2023 and turn it into three separate pieces of content from three different angles."
 collectionThumbnail: "/assets/images/landing-1/marketAnglesThumbnail.png"
 ---
 
