@@ -1,17 +1,16 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
+import { CollectionEntry, getEntryBySlug } from 'astro:content';
 import Layout from '../../../layouts/Post.astro';
-interface Props {
-  posts: CollectionEntry<'blog'>[];
+
+// 1. Get the slug from the incoming server request
+const { slug } = Astro.params;
+// 2. Query for the entry directly using the request slug
+const entry = await getEntryBySlug('blog', slug ?? "404");
+// 3. (Optional) render the entry to HTML in the template
+if (entry === undefined) {
+  Astro.redirect('/404');
 }
-// 1. Generate a new path for every collection entry
-export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map(post => ({
-    params: { slug: post.slug }, props: { post },
-  }));
-}
-const { post } = Astro.props;
+const post = entry as CollectionEntry<"blog">
 const { Content } = await post.render();
 ---
 <Layout
