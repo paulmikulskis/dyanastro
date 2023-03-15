@@ -20,13 +20,14 @@ export default defineConfig({
   integrations: [sitemap(), mdx(), image(), lit(), react()],
   // Add renderers to the config
   // This is for the astro-icon package. You can find more about the package here: https://www.npmjs.com/package/astro-icon
-  vite: {
-    ssr: {
-      external: ["svgo"]
-    }
-  },
+  // vite: {
+  //   ssr: {
+  //     external: ["svgo"]
+  //   }
+  // },
   output: "server",
   adapter: vercel({
-    analytics: true
+    analytics: true,
+    
   })
 });
