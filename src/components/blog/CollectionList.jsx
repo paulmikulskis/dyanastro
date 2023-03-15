@@ -11,6 +11,13 @@ const CollectionList = ({ featuredCollections }) => {
     }
   };
 
+  const goToCollection = (collection) => {
+    if (collection) {
+      const redirect = window.location.origin + '/blog/collections/' + collection;
+      window.location.href = redirect
+    }
+  };
+
   return (
     <div className="content__container sticky-text-image__section">
       <div className="sticky-text-image__text">
@@ -21,6 +28,7 @@ const CollectionList = ({ featuredCollections }) => {
             description={data.collectionDescription}
             collectionThumbnail={data.collectionThumbnail}
             onHover={handleHover}
+            goToCollection={goToCollection}
           />
         ))}
       </div>

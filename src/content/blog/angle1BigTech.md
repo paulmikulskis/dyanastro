@@ -2,11 +2,11 @@
 title: "U.S. Government Prepares Investment Restrictions in China"
 description: Showing Dany how to create a new post
 publishDate: February 24, 2022
-featuredImage: 'https://placekeanu.com/900/500/y'
-excerpt: 'test'
+featuredImage: 'https://placekeanu.com/800/500/y'
+excerpt: It's a bird, it's a plane, it's...a Chinese balloon putting Big Tech investors on edge!
 tags: ['Bullshit']
 collection: "3 Angles on Investing"
-collectionDescription: "In this collection, we take a piece from the NYT going over U.S. investors pulling out of Chinese companies in Q1 of 2023 and turn it into three separate pieces of content from three different angles."
+collectionDescription: "This collection contains samples demonstrating my strengths as a writer for content related to technology, business, and global markets. There are three writing samples based off of the article below found from the New York Times on how the United States might be gradually curbing their investments in China."
 collectionThumbnail: "/assets/images/landing-1/marketAnglesThumbnail.png"
 ---
 

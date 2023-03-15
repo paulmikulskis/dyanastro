@@ -1,0 +1,77 @@
+---
+import Layout from '../../../layouts/Page.astro'
+import { Container } from '@littlesticks/odyssey-theme-components';
+import {generateTagData} from '../../../utils/helpers.js'
+import { getCollection } from 'astro:content';
+
+const { collection } = Astro.params;
+if (collection === undefined) {
+  Astro.redirect('/404');
+}
+const collectionName = collection as string;
+const allPosts = await getCollection('blog', ({ data }) => {
+return !data.hidden;
+});
+const sortedPosts = allPosts.sort((a, b) => {
+  return new Date(b.data.publishDate).valueOf() - 
+  new Date(a.data.publishDate).valueOf()
+})
+const featuredCollectionMap = sortedPosts.reduce((acc, post) => {
+  if (post.data.collection) {
+    const slugs = Array.isArray(acc[post.data.collection]?.slugs) ? acc[post.data.collection].slugs as string[] : [];
+    acc[post.data.collection] = {
+      slugs: [...slugs, post.slug],
+      collectionThumbnail: post.data.collectionThumbnail ? post.data.collectionThumbnail : acc[post.data.collection]?.collectionThumbnail,
+      collectionDescription: post.data.collectionDescription ? post.data.collectionDescription : acc[post.data.collection]?.collectionDescription,
+    };
+  }
+  return acc;
+}, {} as Record<string, Record<string, string[] | string | undefined>>);
+
+const featuredCollection = featuredCollectionMap[collectionName];
+const featuredCollectionPosts = sortedPosts.filter(post => featuredCollection?.slugs?.includes(post.slug));
+
+const seo ={
+  title: `${collection} | Dyana Butler`,
+}
+---
+
+<Layout seo={seo}>
+  <Container narrow>
+    <section class="tag-page__section">
+      <p><i>Collection:</i></p>
+      <h1>{collectionName}</h1>
+      <ul>
+        {featuredCollectionPosts.map(post => (
+          <li><a href={`/blog/posts/${post.slug}`}>{post.data.title}</a></li>
+        ))}
+      </ul>
+      <div class="collection-container">
+        <div class="collection-description">
+          <p>{featuredCollection.collectionDescription}</p>
+        </div>
+        <div class="collection-thumbnail">
+          <img src={featuredCollection.collectionThumbnail as string} alt="Collection Thumbnail" />
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+.collection-page__section {
+  min-height: 60vh;
+  margin: var(--section-margin);
+}
+.collection-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.collection-description{
+  width: 85%;
+}
+.collection-thumbnail {
+  margin-top: 2rem;
+}
+</style>
