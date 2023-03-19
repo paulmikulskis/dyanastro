@@ -1,13 +1,13 @@
 ---
 title: "U.S. Government Prepares Investment Restrictions in China"
-description: Showing Dany how to create a new post
+description: Overview of the Biden Administration's possible restrictions on China's access to certain technology and notable stocks that may be affected. 
 publishDate: February 24, 2022
 featuredImage: 'https://placekeanu.com/800/500/y'
 excerpt: It's a bird, it's a plane, it's...a Chinese balloon putting Big Tech investors on edge!
-tags: ['Bullshit']
+tags: ['investing']
 collection: "3 Angles on Investing"
 collectionDescription: "This collection contains samples demonstrating my strengths as a writer for content related to technology, business, and global markets. There are three writing samples based off of the article below found from the New York Times on how the United States might be gradually curbing their investments in China."
-collectionThumbnail: "/assets/images/landing-1/marketAnglesThumbnail.png"
+collectionThumbnail: "/assets/images/landing-1/investingAnglesNew.png"
 ---
 
 It's a bird, it's a plane, it's...a Chinese balloon putting Big Tech investors on edge! 

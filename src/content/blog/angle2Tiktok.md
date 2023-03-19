@@ -1,10 +1,10 @@
 ---
 title: "Tiktok Might Be Out Again And Its Not Trump This Time"
-description: Showing Dany how to create a new post
+description: Overview on Tiktok's possible ban in the U.S.
 publishDate: February 24, 2022
-featuredImage: 'https://placekeanu.com/900/500/y'
+featuredImage: '/assets/images/blog/tiktokthumbnail.png'
 excerpt: Attention, Tiktokers! Biden's ramping up his efforts to mitigate the risk of economic and  military threats from China, which includes a possible TikTok ban. 
-tags: ['Bullshit']
+tags: ['investing']
 collection: "3 Angles on Investing"
 ---
 

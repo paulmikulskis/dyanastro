@@ -2,9 +2,10 @@
 title: "U.S. to Impose Investment Restrictions on China's Tech Industry: What Venture Capitalists Need to Know"
 description: Angle on the New York Times article from the perspective of Venture Capitalists
 publishDate: February 22, 2022
+hidden: true
 featuredImage: 'https://placekeanu.com/800/400/y'
 excerpt: 'Writing a weekly tabloid on global markets given recent news of waning U.S. interest in Chinese Markets'
-tags: ['Investing']
+tags: ['Investing'] 
 ---
 ### Weekly Venture Tabloid
 
