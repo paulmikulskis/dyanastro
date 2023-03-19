@@ -3,7 +3,7 @@ title: "Chat GPT-4 Can Hallucinate"
 description: Overview of companies pioneering the new Chat GPT-4 model about lingering concerns 
 publishDate: February 24, 2022
 featuredImage: https://cdn.discordapp.com/attachments/1056256695216644180/1086496687276703865/Az_humanoid_robot_army_realistic_cinematic_91a70f7e-d359-4b34-947b-dd52fe37894c.png
-excerpt: a testament to the rapid evolution of artificial intelligence when provided with ample resources to do so. Despite these advancements in GPT-4, it still shares limitations with earlier models, such as being unreliable, prone to hallucinations, and possessing biases in its output.
+excerpt: A testament to the rapid evolution of artificial intelligence when provided with ample resources to do so
 tags: ['gpt-4']
 ---
 # Chat GPT-4 Can Hallucinate 
