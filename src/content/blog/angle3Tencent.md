@@ -1,7 +1,7 @@
 ---
 title: "Tencent's Gaming Empire"
 description: Overview of Tencent's Gaming Empire and how Will the Biden Administration's Restrictions on China Affect the World's Largest Game Company
-publishDate: March 14, 2022
+publishDate: February 16, 2023
 featuredImage: '/assets/images/blog/tencentthumbnail.png'
 excerpt: How Will the Biden Administration's Restrictions on China Affect the World's Largest Game Company?
 tags: ['investing']

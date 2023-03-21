@@ -1,7 +1,7 @@
 ---
 title: "U.S. Government Prepares Investment Restrictions in China"
 description: Overview of the Biden Administration's possible restrictions on China's access to certain technology and notable stocks that may be affected. 
-publishDate: February 24, 2022
+publishDate: February 10, 2023
 featuredImage: /assets/images/blog/bigtechthumbnail.png
 excerpt: It's a bird, it's a plane, it's...a Chinese balloon putting Big Tech investors on edge!
 tags: ['investing']

@@ -1,7 +1,7 @@
 ---
 title: "Tiktok Might Be Out Again And Its Not Trump This Time"
 description: Overview on Tiktok's possible ban in the U.S.
-publishDate: February 24, 2022
+publishDate: February 15, 2023
 featuredImage: '/assets/images/blog/tiktokthumbnail.png'
 excerpt: Attention, Tiktokers! Biden's ramping up his efforts to mitigate the risk of economic and  military threats from China, which includes a possible TikTok ban. 
 tags: ['investing']
