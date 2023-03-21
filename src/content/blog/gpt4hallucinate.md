@@ -3,7 +3,7 @@ title: "Chat GPT-4 Can Hallucinate"
 description: Overview of companies pioneering the new Chat GPT-4 model about lingering concerns 
 publishDate: March 13, 2023
 featuredImage: https://cdn.discordapp.com/attachments/1056256695216644180/1086496687276703865/Az_humanoid_robot_army_realistic_cinematic_91a70f7e-d359-4b34-947b-dd52fe37894c.png
-excerpt: A testament to the rapid evolution of artificial intelligence when provided with ample resources to do so
+excerpt: A testament to the rapid evolution of artificial intelligence when provided with ample resources to do so.
 tags: ['gpt-4']
 ---
 # Chat GPT-4 Can Hallucinate 

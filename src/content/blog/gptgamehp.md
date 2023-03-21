@@ -27,7 +27,7 @@ You can change scenes and locations as you wish, add additional options, etc.
 
 >*I chose D*
 
-### ChatGPT boasts a comprehensive collection of all Harry Potter spells, making this game not only engaging and thrilling, but also educational – that is, if mastering Harry Potter spells is a skill you'd like to acquire.
+ChatGPT boasts a comprehensive collection of all Harry Potter spells, making this game not only engaging and thrilling, but also educational – that is, if mastering Harry Potter spells is a skill you'd like to acquire.
 
 ![img3](https://i.imgur.com/6A2aWh7.png)
 
@@ -41,7 +41,7 @@ You can change scenes and locations as you wish, add additional options, etc.
 
 >*I chose B*
 
-### It also employs the imaginative and captivating writing style found in the Harry Potter series, seamlessly integrating vivid descriptions and dynamic action.
+It also employs the imaginative and captivating writing style found in the Harry Potter series, seamlessly integrating vivid descriptions and dynamic action.
 
 ![img6](https://i.imgur.com/VveZaTM.png)
 
