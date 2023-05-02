@@ -5,6 +5,7 @@ import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
 import Logo from '../components/Logo.astro';
 import settings from '../config/settings';
 import { footerLists, footerSocials } from '../config/footer';
+import '../styles/odyssey-customs.css';
 
 
 export interface Props {
@@ -22,7 +23,7 @@ const { seo } = Astro.props as Props;
 			<Logo />
 		</span>
 	</Header>
-	<div id="page">
+	<div id="page" class="gradient-2">
 		<slot />
 	</div>
 	<Footer
