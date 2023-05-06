@@ -8,7 +8,7 @@ import {
 	YouTubeEmbedSection,
   CtaCardSection,
   Container
-} from '@littlesticks/odyssey-theme-components';
+}from '@littlesticks/odyssey-theme-components';
 import { CollectionEntry, getCollection } from 'astro:content';
 import Layout from '../layouts/Page.astro';
 import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
@@ -22,7 +22,7 @@ const allBlogPosts = await getCollection('blog', ({ data }) => {
 	return !data.hidden;
 });
 const seo = {
-	title: 'Dyana Butler | Home',
+	title: 'Dyana Butler',
 	description: 'Work, Blog, and Portfolio of Dyana Butler, get in touch today.',
 };
 // Code to generate featuredCollections (same as previous implementation)
@@ -134,7 +134,7 @@ const featuredCollections = Object.fromEntries(
 
 
   <CtaCardSection background="var(--theme-surface-1)" color="var(--theme-on-surface-1)">
-    <h2>Get In Touch With Me</h2>
+    <h2>Get In Touch</h2>
     <p>
       Don't let complicated outreach hold you back. Reach out to me and I'll be in touch with just a couple of clicks to help you succeed.
     </p>
