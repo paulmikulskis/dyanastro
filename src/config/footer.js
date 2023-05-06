@@ -11,15 +11,15 @@ export const footerLists = [
 		title: 'Services',
 		items: [
 			{
-				title: 'Technical Writing',
+				title: 'Writing',
 				slug: '/blog',
 			},
 			{
-				title: 'SEO',
+				title: 'Design',
 				slug: '/intuitive-web',
 			},
 			{
-				title: 'Process',
+				title: 'U-G-C',
 				slug: '/discovery-call',
 			},
 		],
