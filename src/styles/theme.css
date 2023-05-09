@@ -4,8 +4,8 @@
 	--theme-primary-hover: #7584a5;
 	--theme-on-primary: hsl(0, 0%, 100%);
 
-	--theme-bg: hsla(0, 0%, 100%, 0);
-	--theme-on-bg: #363d5e;
+	--theme-bg: hsl(0, 0%, 100%);
+	--theme-on-bg: rgb(52, 43, 74);
 
 	--theme-surface-1: hsla(201, 21%, 84%, 0);
 	--theme-on-surface-1: #15313e;
