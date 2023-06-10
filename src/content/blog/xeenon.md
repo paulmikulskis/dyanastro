@@ -2,7 +2,7 @@
 title: "Xeenon: Is Twitch Dead?"
 description: Discover how Xeenon, a new blockchain-based streaming platform, is offering direct ETH payouts to streamers and transforming the way creators earn from their content.
 publishDate: June 08, 2022
-hidden: true
+hidden: false
 featuredImage: 'https://i.imgur.com/lxGDiyX_d.jpg?maxwidth=520&shape=thumb&fidelity=high'
 excerpt: 'Discover how Xeenon, a new blockchain-based streaming platform, is offering direct ETH payouts to streamers and transforming the way creators earn from their content.'
 tags: ['Investing'] 
