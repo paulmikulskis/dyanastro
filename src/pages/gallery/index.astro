@@ -30,9 +30,9 @@ import { Picture } from '@astrojs/image/components';
 </style>
 
 <Layout>
-    <h1>Gallery</h1>
+    <h1>Loading Gallery...</h1>
     <div class="gallery">
-        {Array(9).fill(0).map((_, index) => (
+        {Array(12).fill(0).map((_, index) => (
             <Picture
                 src={`/gallery/image${index + 1}.png`}
                 widths={[200, 400, 800]}
